@@ -18,4 +18,4 @@ Le temple des Pierres Précieuses est un projet académique réalisé avec Unity
   - Intégrer toutes les fonctionnalités du jeu vues en cours.
   - Incorporer des fonctionnalités supplémentaires en utilisant des ressources documentaires.
 
-Version Unity : 2021.3.11f1
+Version Unity : 2022.3.10f1
