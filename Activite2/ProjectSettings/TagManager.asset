@@ -25,9 +25,9 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -38,15 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground and Grass
+    uniqueID: 352628335
+    locked: 0
+  - name: Building
+    uniqueID: 364641841
+    locked: 0
+  - name: Props
+    uniqueID: 4292514517
+    locked: 0
+  - name: Player
+    uniqueID: 2196511575
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Layer 1
-    uniqueID: 2425651459
-    locked: 0
-  - name: Layer 2
-    uniqueID: 4250941897
-    locked: 0
-  - name: Layer 3
-    uniqueID: 4189426099
     locked: 0
