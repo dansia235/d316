@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
                 if (hitPlayer.gameObject.CompareTag("Player"))
                 {
                     // Inflige des dégâts au joueur
-                    hitPlayer.GetComponent<Movement>().TakeDamage(attackDamage);
+                    hitPlayer.GetComponent<Player>().TakeDamage(attackDamage);
                     lastAttackTime = Time.time;
                 }
             }

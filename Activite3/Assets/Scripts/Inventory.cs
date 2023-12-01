@@ -5,14 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Inventory
 {
-
     [System.Serializable]
     public class Slot
     {
         public Collectable.CollectableType type;
         public int count;
         public int maxAllowed;
-
         public Sprite icon;
 
         public Slot()
@@ -24,17 +22,16 @@ public class Inventory
 
         public bool CanAddItem()
         {
-            if (count < maxAllowed)
-            {
-                return true;
-            }
-            return false;
+            return count < maxAllowed;
         }
 
         public void AddItem(Collectable item)
         {
-            this.type = item.type;
-            this.icon = item.icon;
+            if (type == Collectable.CollectableType.NONE)
+            {
+                type = item.type;
+                icon = item.icon;
+            }
             count++;
         }
     }
@@ -45,14 +42,13 @@ public class Inventory
     {
         for (int i = 0; i < numSlots; i++)
         {
-            Slot slot = new Slot();
-            slots.Add(slot);
+            slots.Add(new Slot());
         }
-
     }
 
     public void Add(Collectable item)
     {
+        // Chercher d'abord un slot avec le même type et qui n'est pas plein
         foreach (Slot slot in slots)
         {
             if (slot.type == item.type && slot.CanAddItem())
@@ -62,6 +58,7 @@ public class Inventory
             }
         }
 
+        // Si aucun slot existant n'est trouvé, chercher un slot vide
         foreach (Slot slot in slots)
         {
             if (slot.type == Collectable.CollectableType.NONE)
@@ -70,5 +67,8 @@ public class Inventory
                 return;
             }
         }
+
+        // Gérer le cas où il n'y a plus de place dans l'inventaire
+        Debug.LogWarning("Pas assez de place dans l'inventaire pour ajouter cet objet.");
     }
 }
