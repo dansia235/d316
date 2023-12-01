@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CollectableSpawner : MonoBehaviour
 {
-    public GameObject[] fruitPrefabs; // Vos préfabs de fruits
+    public GameObject[] stonePrefabs; // Vos préfabs de pierres
     public float spawnInterval = 2.0f; // Intervalle entre les spawns
-    public float fruitLifetime = 5.0f; // Durée de vie des fruits
+    public float stoneLifetime = 5.0f; // Durée de vie des pierres
 
     private Camera mainCamera;
     private Vector2 screenBounds;
@@ -15,7 +15,7 @@ public class CollectableSpawner : MonoBehaviour
     {
         mainCamera = Camera.main;
         screenBounds = CalculateScreenBounds();
-        InvokeRepeating("SpawnFruit", 0.0f, spawnInterval);
+        InvokeRepeating("SpawnStone", 0.0f, spawnInterval);
     }
 
     Vector2 CalculateScreenBounds()
@@ -25,29 +25,29 @@ public class CollectableSpawner : MonoBehaviour
         return new Vector2(cameraWidth / 2, cameraHeight / 2);
     }
 
-    void SpawnFruit()
+    void SpawnStone()
     {
-        if (fruitPrefabs.Length == 0)
+        if (stonePrefabs.Length == 0)
         {
-            Debug.LogError("Aucun préfab de fruit n'est assigné au script CollectableSpawner.");
+            Debug.LogError("Aucun préfab de stone n'est assigné au script CollectableSpawner.");
             return;
         }
 
-        int randomIndex = Random.Range(0, fruitPrefabs.Length);
+        int randomIndex = Random.Range(0, stonePrefabs.Length);
 
-        if (fruitPrefabs[randomIndex] != null)
+        if (stonePrefabs[randomIndex] != null)
         {
             Vector2 spawnPosition = new Vector2(
                 Random.Range(-screenBounds.x, screenBounds.x),
                 Random.Range(-screenBounds.y, screenBounds.y)
             ) + (Vector2)mainCamera.transform.position;
 
-            GameObject fruit = Instantiate(fruitPrefabs[randomIndex], spawnPosition, Quaternion.identity);
-            Destroy(fruit, fruitLifetime); // Détruit le fruit après 'fruitLifetime' secondes
+            GameObject stone = Instantiate(stonePrefabs[randomIndex], spawnPosition, Quaternion.identity);
+            Destroy(stone, stoneLifetime); // Détruit le pierre après 'stoneLifetime' secondes
         }
         else
         {
-            Debug.LogError("Le préfab de fruit à l'indice " + randomIndex + " est nul.");
+            Debug.LogError("Le préfab de stone à l'indice " + randomIndex + " est nul.");
         }
     }
 }

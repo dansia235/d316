@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory_UI : MonoBehaviour
-
 {
-
     public GameObject inventoryPanel;
-
     public Player player;
-
     public List<Slot_UI> slots = new List<Slot_UI>();
 
     void Update()
@@ -22,21 +18,27 @@ public class Inventory_UI : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (!inventoryPanel.activeSelf)
+        // Vérifie si inventoryPanel est non nul
+        if (inventoryPanel != null)
         {
-            inventoryPanel.SetActive(true);
-            Setup();
+            bool isActive = inventoryPanel.activeSelf;
+            inventoryPanel.SetActive(!isActive);
+
+            if (!isActive)
+            {
+                Setup();
+            }
         }
         else
         {
-            inventoryPanel.SetActive(false);
+            Debug.LogError("Inventory Panel n'est pas assigné dans l'inspecteur!");
         }
-
     }
 
     void Setup()
     {
-        if (slots.Count == player.inventory.slots.Count)
+        // Vérifie si player et player.inventory sont non nuls
+        if (player != null && player.inventory != null && slots.Count == player.inventory.slots.Count)
         {
             for (int i = 0; i < slots.Count; i++)
             {
@@ -49,7 +51,10 @@ public class Inventory_UI : MonoBehaviour
                     slots[i].SetEmpty();
                 }
             }
-
+        }
+        else
+        {
+            Debug.LogError("Player, Player Inventory ou Slots ne sont pas correctement initialisés!");
         }
     }
 }

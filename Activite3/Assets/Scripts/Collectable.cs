@@ -21,6 +21,6 @@ public class Collectable : MonoBehaviour
 
     public enum CollectableType
     {
-        NONE, STRAWBERRY, AVOCADO, BANANA, WATER, ORANGE, WATERMELON, GRAPES, APPLE, PINEAPPLE, CARROT, PEAR, CHERRY
+        NONE, BLUE, DARK_BLUE, EMERALD, GREEN, LIGHT_BLUE, LILAC, ORANGE, PINK, PURPLE, RED, VIOLET, YELLOW
     }
 }
