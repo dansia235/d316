@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!91 &9100000
+AnimatorController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DALL_E_2023-11-27_16_41_34_-_A_collection_of_2D_gemstones__designed_to_be_used_in_a_top-down_2D_game_on_Unity__Each_gemstone_should_be_suitable_for_simple_animation__with_a_clear_-removebg-preview_15
+  serializedVersion: 5
+  m_AnimatorParameters: []
+  m_AnimatorLayers: []
