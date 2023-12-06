@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6335715325002307751}
   - component: {fileID: 7451574427172236430}
-  - component: {fileID: 3241620068820151967}
   m_Layer: 0
   m_Name: Emerald
   m_TagString: Untagged
@@ -164,17 +163,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8691788, y: 1.0523285}
   m_EdgeRadius: 0
---- !u!114 &3241620068820151967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7860275821630746948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf290b8949134a90897283d1fcac521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 3
-  icon: {fileID: 21300000, guid: 50e0347d981414d189ff77217bc6e69c, type: 3}

@@ -89,11 +89,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1118452187393456304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf290b8949134a90897283d1fcac521, type: 3}
+  m_Script: {fileID: 11500000, guid: 1069bfe65377840f18e1343128dbfcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 12
-  icon: {fileID: 21300000, guid: 4a7cdb60454cffd47b2090bc8524645d, type: 3}
 --- !u!1 &2646771398634658024
 GameObject:
   m_ObjectHideFlags: 0

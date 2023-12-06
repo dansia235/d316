@@ -187,24 +187,24 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1448395527360353006}
-    m_Position: {x: -1370, y: -320, z: 0}
+    m_Position: {x: -140, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7362918069299794684}
-    m_Position: {x: -1330, y: -50, z: 0}
+    m_Position: {x: -100, y: 580, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7272285595993344851}
-    m_Position: {x: -940, y: 50, z: 0}
+    m_Position: {x: 290, y: 680, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4753200170110129242}
-    m_Position: {x: -980, y: -300, z: 0}
+    m_Position: {x: 250, y: 330, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -1610, y: -270, z: 0}
-  m_EntryPosition: {x: -1570, y: -170, z: 0}
-  m_ExitPosition: {x: -830, y: -160, z: 0}
+  m_AnyStatePosition: {x: -380, y: 360, z: 0}
+  m_EntryPosition: {x: -340, y: 460, z: 0}
+  m_ExitPosition: {x: 400, y: 470, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -1448395527360353006}
 --- !u!91 &9100000
@@ -246,13 +246,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AttackDirectionX
+  - m_Name: AttackingDirectionX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AttackDirectionY
+  - m_Name: AttackingDirectionY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -439,8 +439,8 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: horizontal
     m_Mirror: 0
-  m_BlendParameter: AttackDirectionX
-  m_BlendParameterY: AttackDirectionY
+  m_BlendParameter: AttackingDirectionX
+  m_BlendParameterY: AttackingDirectionY
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1

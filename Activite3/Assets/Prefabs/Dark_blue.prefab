@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6504939131794465550}
   - component: {fileID: 1119363390758133419}
-  - component: {fileID: 3127594218488044015}
   m_Layer: 0
   m_Name: Dark_blue
   m_TagString: Untagged
@@ -164,17 +163,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8691788, y: 1.0523285}
   m_EdgeRadius: 0
---- !u!114 &3127594218488044015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5311799214034335984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf290b8949134a90897283d1fcac521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  icon: {fileID: 21300000, guid: 75e8585518097c24ab7146c0a641e5ca, type: 3}
